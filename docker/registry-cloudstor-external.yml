@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  main:
+    image: registry
+    ports:
+      - "5050:5000"
+    volumes:
+      - registry:/var/lib/registry
+    deploy:
+      resources:
+        reservations:
+          memory: 100M
+
+volumes:
+  registry:
+    driver: cloudstor:azure
+    external: true
