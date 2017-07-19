@@ -5,7 +5,7 @@ services:
   main:
     image: vfarcic/jenkins
     ports:
-      - 50001:50000
+      - 50000:50000
     environment:
       - JENKINS_OPTS="--prefix=/jenkins"
     networks:
