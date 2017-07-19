@@ -15,5 +15,4 @@ services:
 
 volumes:
   registry:
-    driver: cloudstor:azure
     external: true
