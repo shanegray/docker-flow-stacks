@@ -31,7 +31,7 @@ networks:
   proxy:
     external: true
   jenkins:
-    driver: overlay
+    external: true
 
 secrets:
   jenkins-user:
