@@ -10,6 +10,7 @@ services:
       - JENKINS_OPTS="--prefix=/jenkins"
     networks:
       - proxy
+      - jenkins
     volumes:
       - main:/var/jenkins_home
     deploy:
@@ -29,6 +30,8 @@ volumes:
 networks:
   proxy:
     external: true
+  jenkins:
+    driver: overlay
 
 secrets:
   jenkins-user:
